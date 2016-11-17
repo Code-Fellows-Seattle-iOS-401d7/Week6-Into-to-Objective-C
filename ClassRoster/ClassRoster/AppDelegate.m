@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  MRC_Demo
+//  ClassRoster
 //
-//  Created by Corey Malek on 11/15/16.
+//  Created by Corey Malek on 11/16/16.
 //  Copyright © 2016 Corey Malek. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "User.h"
 
 @interface AppDelegate ()
 
@@ -17,18 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    
-    User *newUser = [[User alloc]init];
-    
-    [newUser setName:@"Corey"];
-    [newUser setEmail:@"coreymalek1@gmail.com"];
-    [newUser setAge:@"24"];
-    
-    NSLog(@"%@", newUser.description);
-    
-    [newUser release];
-    
+    // Override point for customization after application launch.
     return YES;
 }
 
