@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "StudentStore.h"
 
-@interface ViewController () <UITableViewDataSource>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *studentTable;
 
@@ -29,15 +29,21 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"studentsGoHere"];
-    cell.textLabel.text = [[StudentStore shared] allStudents];
-    //what goes here...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"studentsGoHere" forIndexPath:indexPath];
+    NSArray *allStudents = [[StudentStore shared] allStudents];
+
+    Student *currentStudent = allStudents[indexPath.row];
+    cell.textLabel.text = currentStudent.firstName;
     return cell;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    self.studentTable.dataSource = self;
+    self.studentTable.delegate = self;
+    self.studentTable.estimatedRowHeight = 75;
+    self.studentTable.rowHeight = UITableViewAutomaticDimension;
 
     
     NSArray *allStudents = [[StudentStore shared] allStudents];
