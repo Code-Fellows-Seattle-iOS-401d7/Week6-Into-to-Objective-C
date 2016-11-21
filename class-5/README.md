@@ -4,20 +4,13 @@
 
 ###Reading Assignment:
 * Programming in Objective-C:
-  * **Chapter 9:** Polymorphism, Dynamic Typing and Dymanic Binding
+  * **Chapter 4:** Data Types and Expressions
+  * **Chapter 5:** Program Looping
+  * **Chapter 8:** Inheritance
+  * **Chapter 10:** More on Variables and Data Types
+  * **Chapter 11:** Categories and Protocols
 * Apple Documentation
   * MapKit
-
-
-
-###Coding Challenges
-* Given a sorted array, write a generic, binary search function.
-* Implement Binary Search Tree with these functionalities:
-  * addNode
-  * removeNode
-  *  List values of binary tree in order
-  * minValue/maxValue
-  * isBinarySearchTree
 
 ##Other Resources
 * [Reading Assignments](../../Resources/ra-grading-standard/)
